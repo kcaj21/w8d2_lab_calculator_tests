@@ -94,8 +94,14 @@ function App() {
 
   const divide = (number) => {
     let calculatedNumber = parseFloat(previousTotal) / parseFloat(number);
+    if (calculatedNumber === Infinity) {
+    setRunningTotal(0);
+    setCalculatedTotal(0);
+    } else {
+
     setRunningTotal(calculatedNumber);
     setCalculatedTotal(calculatedNumber);
+    }
   }
 
 

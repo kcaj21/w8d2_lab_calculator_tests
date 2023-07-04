@@ -117,13 +117,15 @@ it('clear the running total without affecting the calculation', () => {
   const num2Button = container.getByTestId("number2")
   const addButton = container.getByTestId("operator-add")
   const equalsButton = container.getByTestId("operator-equals")
+  const clearButton = container.getByTestId("clear")
+  
   fireEvent.click(num2Button);
   fireEvent.click(addButton);
   fireEvent.click(num2Button);
   fireEvent.click(addButton);
   fireEvent.click(num2Button);
   fireEvent.click(equalsButton);
-  fireEvent.click(clear);
+  fireEvent.click(clearButton);
   fireEvent.click(addButton);
   fireEvent.click(num2Button);
   fireEvent.click(equalsButton);
